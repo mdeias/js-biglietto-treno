@@ -7,7 +7,7 @@
 const km = prompt( "Quanti km vuoi percorrere?");
 const anni = prompt( "Quanti anni hai?");
 
-let prezzo = (0.21 * km);
+let prezzo = (0.21 * km).toFixed(2);
 
 const sconto18 = (0.042 * km);
 const sconto65 = (0.084 * km);
@@ -23,3 +23,6 @@ if (anni > 65){
 
     console.log(prezzo - sconto65);
 }
+
+
+document.getElementById ("prezzo").innerHTML = prezzo + "€";
